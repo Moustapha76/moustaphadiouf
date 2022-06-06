@@ -150,6 +150,7 @@ header {
     background-image: url(../img/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom;
     background-color: #00000052;
     background-blend-mode: overlay;
 }
@@ -904,7 +905,109 @@ footer {
 
 footer p {
     font-family: var(--font3);
+    text-align: center;
+    line-height: 2;
 }
 
 
 /* main */
+
+label,
+input#bar {
+    display: none;
+}
+
+
+/* responsivity  */
+
+@media (max-width: 576px) {
+    label {
+        display: block;
+        z-index: 99;
+        position: relative;
+        color: #fff;
+        padding: 30px 30px;
+        font-size: 25px;
+    }
+    input[type='checkbox'] {
+        transition: all .3s linear;
+    }
+    input[type='checkbox']:checked~nav {
+        display: none;
+    }
+    nav {
+        margin: 0;
+        position: absolute;
+        border-radius: 0;
+        transition: all .3s linear;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+    }
+    nav ul li {
+        margin: 15px 0;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+    main section#about .bloc:nth-child(1) {
+        display: none;
+    }
+    main section .bloc {
+        width: 100%;
+    }
+    nav.fixed {
+        position: absolute;
+    }
+    main section#education .container .item {
+        padding: 10% 0% 0 16%;
+        text-align: left;
+        width: 100%;
+        border-left: 1px solid var(--color3);
+        border-right: none;
+    }
+    main section#education .container .item:nth-child(even) {
+        left: 0%;
+    }
+    main section#education .container .item:before {
+        left: 0;
+        width: 40px;
+    }
+    main section#education .container .item::after,
+    main section#education .container .item:nth-child(even)::after {
+        left: calc(0% - 5px);
+        width: 10px;
+        height: 10px;
+        top: 31px;
+    }
+    main section .container .item .date {
+        position: relative;
+        top: -10px;
+        font-weight: bold;
+        text-align: left;
+        padding-left: 0px;
+        font-size: 16px;
+    }
+    main section#projects .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5';
+    }
+    main section#skills .container,
+    main section#contact .container {
+        flex-wrap: wrap;
+    }
+    main section#skills .container div {
+        width: 100%;
+        margin: 10% 0 40px 0;
+        padding: 0%;
+    }
+    main section#skills .container div .level,
+    main section#contact form {
+        width: 100%;
+    }
+}
+
+
+/* responsivity  */
