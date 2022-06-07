@@ -70,37 +70,21 @@ button a {
     margin: 10px;
 }
 
-.btns button:nth-child(1) a {
+.btns button a {
     color: var(--color0);
 }
 
-.btns button:nth-child(1):hover a {
-    color: var(--color3);
-}
-
-.btns button:nth-child(2) a {
-    color: var(--color3);
-}
-
-.btns button:nth-child(2):hover a {
+.btns button:hover a {
     color: var(--color0);
 }
 
-.btns button:nth-child(1) {
+.btns button {
     background-color: var(--color3);
     color: var(--color2);
 }
 
-.btns button:nth-child(1):hover {
+.btns button:hover {
     background-color: var(--color2);
-}
-
-.btns button:nth-child(2) {
-    background-color: var(--color1);
-}
-
-.btns button:nth-child(2):hover {
-    background-color: var(--color3);
 }
 
 button:hover a {
@@ -209,7 +193,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: var(--color1);
-    color: var(--color3);
+    color: var(--color0);
 }
 
 .banner {
@@ -278,6 +262,7 @@ main section .bloc img {
 }
 
 main section h1 {
+    margin-bottom: 30px;
     padding: 10px 0;
     text-transform: uppercase;
     font-size: 30px;
@@ -298,7 +283,7 @@ main section h1:before {
     width: 60px;
     height: 3px;
     background: var(--color3);
-    top: calc(100% + 10px);
+    top: calc(100% + 0px);
     left: 50%;
     transform: translateX(-50%);
 }
@@ -445,7 +430,7 @@ main section#projects .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "item1 item2 item2 item3" "item1 item4 item5 item5";
-    padding-top: 4%;
+    padding-top: 10%;
     grid-gap: 15px;
 }
 
@@ -725,11 +710,10 @@ main section#hobbies {
 }
 
 main section#hobbies .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
     padding: 5% 10% 0;
     flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 main section#hobbies .item {
@@ -810,7 +794,7 @@ main section#contact form {
 main section#contact form h2 {
     line-height: 1.5;
     font-family: var(--font1);
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 100;
     color: var(--color0);
     margin-bottom: 20px;
@@ -921,6 +905,15 @@ input#bar {
 /* responsivity  */
 
 @media (max-width: 576px) {
+    section#header {
+        height: 110vh;
+    }
+    main section#hobbies .container {
+        grid-template-columns: 1fr;
+    }
+    main section {
+        padding: 4%;
+    }
     label {
         display: block;
         z-index: 99;
@@ -936,6 +929,7 @@ input#bar {
         display: none;
     }
     nav {
+        width: 100%;
         margin: 0;
         position: absolute;
         border-radius: 0;
@@ -984,7 +978,7 @@ input#bar {
     }
     main section .container .item .date {
         position: relative;
-        top: -10px;
+        top: -15px;
         font-weight: bold;
         text-align: left;
         padding-left: 0px;
