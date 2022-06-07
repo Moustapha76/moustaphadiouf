@@ -237,7 +237,7 @@ main section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5% 10%;
+    padding: 50px 10%;
     flex-direction: column;
 }
 
@@ -377,7 +377,7 @@ main section#experience .container {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 5%;
+    margin-top: 20px;
 }
 
 main section#experience .container div {
@@ -430,7 +430,7 @@ main section#projects .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "item1 item2 item2 item3" "item1 item4 item5 item5";
-    padding-top: 10%;
+    padding-top: 20px;
     grid-gap: 15px;
 }
 
@@ -536,7 +536,7 @@ main section#projects .project-item img {
 main section#skills .container {
     display: flex;
     width: 100%;
-    padding: 5% 0%;
+    padding: 20px 0%;
     justify-content: center;
 }
 
@@ -711,7 +711,7 @@ main section#hobbies {
 
 main section#hobbies .container {
     display: grid;
-    padding: 5% 10% 0;
+    padding: 20px 10% 0;
     flex-wrap: wrap;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -722,7 +722,7 @@ main section#hobbies .item {
     align-items: center;
     justify-content: space-evenly;
     padding: 20px;
-    height: 150px;
+    height: 200px;
     width: 250px;
     background: #ffffff;
     margin: 10px;
@@ -738,7 +738,7 @@ main section#hobbies .item:hover {
 }
 
 main section#hobbies .item i {
-    font-size: 30px;
+    font-size: 50px;
 }
 
 main section#hobbies .item span {
@@ -756,7 +756,7 @@ main section#contact .container {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding: 7% 0%;
+    padding: 20px 0%;
     width: 100%;
 }
 
