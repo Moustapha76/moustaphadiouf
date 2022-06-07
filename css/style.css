@@ -905,6 +905,9 @@ input#bar {
 /* responsivity  */
 
 @media (max-width: 576px) {
+    main section h1 {
+        font-size: 18px;
+    }
     section#header {
         height: 110vh;
     }
